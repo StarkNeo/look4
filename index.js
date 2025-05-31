@@ -7,9 +7,10 @@ const app = express()
 const config = require('./utils/config')
 const Advertiser = require('./models/advertiser')
 
-console.log(json)
+//console.log(json)
 
 app.use(cors())
+app.use(express.static('dist'))
 app.use(express.json())
 app.use('/images', express.static('public/images'))
 
